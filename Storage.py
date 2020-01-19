@@ -12,7 +12,7 @@ class Storage:
         self.angle = angle
         self.color = color
         self.potential = [0, 0]
-        self.elasticity = 0.01
+        self.elasticity = 0.08
 
 
     def draw(self, img):

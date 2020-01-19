@@ -10,14 +10,14 @@ class Marble:
         shapex = img.shape[1]
         shapey = img.shape[0]
         if self.pos[0]+self.size > shapex:
-            self.speed[0]*= -1
+            self.speed[0] = -abs(self.speed[0])
         elif self.pos[0]-self.size < 0:
-            self.speed[0]*=-1
+            self.speed[0] = abs(self.speed[0])
 
         if self.pos[1]+self.size > shapey:
-            self.speed[1]*= -1
+            self.speed[1] = -abs(self.speed[1])
         elif self.pos[1]-self.size < 0:
-            self.speed[1]*=-1
+            self.speed[1] = abs(self.speed[1])
 
         self.pos[0] += self.speed[0]
         self.pos[1] += self.speed[1]

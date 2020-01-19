@@ -7,11 +7,11 @@ winName = "ellipses"
 cv2.namedWindow(winName)
 
 ss = []
-for i in range(2):
-    for j in range(2):
-        ss.append(Storage([300*(i+1), 300*(j+1)]))
+for i in range(4):
+    for j in range(4):
+        ss.append(Storage([300*(i), 300*(j)], baseSize=75))
 
-m = Marble([70, 70], [2, 1])
+m = Marble([70, 70], [4, 2])
 
 while 1:
     img2 = img.copy()
@@ -26,4 +26,3 @@ while 1:
         break
 
     cv2.imshow(winName, img2)
-
